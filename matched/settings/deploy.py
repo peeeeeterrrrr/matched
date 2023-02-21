@@ -15,7 +15,7 @@ env = environ.Env(
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
-SECRET_KEY = read_secret('Basicframe_Django_Secret_Key') # secretkey 수정
+SECRET_KEY = read_secret('Matched_Django_Secret_Key') # secretkey 수정
 
 DEBUG = False
 
@@ -28,7 +28,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django', # yml 파일과 이름 맞춰주기
         'USER': 'peter', # yml 파일과 이름 맞춰주기
-        'PASSWORD': read_secret('Basicframe_MariaDB_Password'),  # maridb 비밀번호 수정
+        'PASSWORD': read_secret('Matched_MariaDB_Password'),  # maridb 비밀번호 수정
         'HOST': 'mariadb',
         'PORT': '3306',
     }
