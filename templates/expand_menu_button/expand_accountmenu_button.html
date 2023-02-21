@@ -1,0 +1,91 @@
+<style>
+
+.ExpandedBox_Account {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 230px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s, visibility 0.8s;
+  position: relative;
+  top:15px;
+  border-radius:0.5rem;
+  padding-left:0.5rem;
+  padding-right:0.5rem;
+  background-color:	var(--bright_bg_color);
+  box-shadow: 0px 0px 4px var(--dark_text_color);
+}
+
+.ExpandedBoxItems_Account{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left:2rem;
+    align-items: center;
+    height:3.3rem;
+    width: 100%;
+    border-top: 1px solid #C8C8C8;
+}
+
+#LabelLink-Account:checked ~ .ExpandedBox_Account {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1000px) {
+    .ExpandedBoxItems_Account{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left:0;
+        font-size: 1.3rem;
+        align-items: center;
+        background-color:var(--darktp_bg_color);
+        height:4.5rem;
+        width: 100%;
+        border-top: 0.5px solid gray;
+        z-index: 100;
+    }
+
+    .ExpandedBox_Account {
+        padding:0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 5.7rem;
+      width: 100%;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s, visibility 0.8s;
+    }
+
+    .ExpandedBox_Account a{
+        color:var(--bright_text_color);
+    }
+
+    .DropdownArrow {
+        display:none;
+    }
+
+}
+
+
+</style>
+
+<input style="display:none;" type="checkbox" id="LabelLink-Account">
+<label for="LabelLink-Account" class="ExpandIconStyle material-icons">
+    <span class="DropdownArrow">arrow_drop_down</span>account_circle
+</label>
+<div class="ExpandedBox_Account ContentFont">
+    {% include 'menues/logined_account_menues.html' %}
+</div>

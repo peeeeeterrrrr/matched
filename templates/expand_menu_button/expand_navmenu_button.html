@@ -1,0 +1,64 @@
+<style>
+
+.ExpandedBoxItems_Nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left:3rem;
+    font-size: 1.35rem;
+    align-items: center;
+}
+
+.ExpandedBox_Nav {
+    display:none;
+}
+
+#LabelLink-Nav:checked ~ .ExpandedBox_Nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@media (max-width: 1000px) {
+    .ExpandedBoxItems_Nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left:0;
+        font-size: 1.3rem;
+        align-items: center;
+        background-color:var(--darktp_bg_color);
+        height:4.5rem;
+        width: 100%;
+        border-top: 0.5px solid gray;
+        z-index: 100;
+    }
+
+    .ExpandedBox_Nav{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 5.7rem;
+      width: 100%;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.8s, visibility 0.8s;
+    }
+
+    .ExpandedBox_Nav a{
+        color:var(--bright_text_color);
+    }
+
+}
+</style>
+
+
+<input style="display:none;" type="checkbox" id="LabelLink-Nav">
+<label for="LabelLink-Nav" class="ExpandIconStyle material-icons">menu</label>
+<div class="ExpandedBox_Nav ContentFont">
+    {% include 'menues/logouted_nav_menues.html' %}
+</div>

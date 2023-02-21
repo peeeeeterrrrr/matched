@@ -1,0 +1,79 @@
+/* 네비게이션 메뉴 */
+.Footer_NavBox_Item{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+    align-items: flex-start;
+}
+
+/* 로고 전체 */
+.Footer_LogoItem{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+    align-items: flex-start;
+}
+
+/* 웹 로고 */
+.Footer_LogoItem_Logo{
+    zoom: 0.8;
+    margin-right:2rem;
+    position: relative;
+    bottom:1.3rem;
+}
+
+/* 로고 상세 */
+.Footer_LogoItem_Detail{
+    font-size: 0.8rem;
+}
+
+/* 네비게이션 아이템 */
+.Footer_NavBox_MenuItem{
+    font-size: 1.1rem;
+    margin-left:1.5rem;
+}
+
+@media (max-width: 1000px) {
+    /* 로고 전체 */
+    .Footer_LogoItem{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 네비게이션 메뉴 */
+    .Footer_NavBox_Item{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    /* 로고 */
+    .Footer_LogoItem_Logo{
+        margin:0;
+    }
+
+    /* 로고 상세 */
+    .Footer_LogoItem_Detail{
+        font-size: 0.9rem;
+    }
+
+    /* 네비게이션 아이템 */
+    .Footer_NavBox_MenuItem{
+        margin:0.6rem;
+        font-size: 1.1rem;
+    }
+
+}

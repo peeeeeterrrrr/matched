@@ -1,0 +1,17 @@
+:root {
+  --dark_bg_color: 	#282828;
+  --bright_bg_color: white;
+  --middle_bg_color: #F0F0F0;
+
+  --dark_text_color: black;
+  --bright_text_color: white;
+  --middle_text_color: #404040;
+
+  --hover_text_color: #FFC0CB;
+
+  --dark_shadow_color: black;
+  --bright_shadow_color: white;
+
+  --brighttp_bg_color:rgba(255,255,255,0.95);
+  --darktp_bg_color: rgba(16,16,16,0.9);
+}

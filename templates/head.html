@@ -1,0 +1,56 @@
+{% load static%}
+
+<head>
+    <meta charset="UTF-8">
+
+    <!--  반응형 웹 만들어주기  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- 모바일 크기에 맞춰주기-->
+    <link rel="short icon" href="#">
+    <title>BasicFrameForWeb</title>
+
+    <!--부트스트랩링크-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--  googlefont link-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+
+    <!-- 구글 material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <!--css링크-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/frame/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/frame/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/variable.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form/basicform.css' %}">
+
+    <style>
+        @font-face{
+            font-family: 'NanumSquareRoundOTFB';
+            src: local('NanumSquareRoundOTFB'),
+            url('{% static 'fonts/NanumSquareRoundOTFB.otf' %}') format('opentype');
+        }
+        @font-face{
+            font-family: 'NanumSquareRoundOTFEB';
+            src: local('NanumSquareRoundOTFEB'),
+            url('{% static 'fonts/NanumSquareRoundOTFEB.otf' %}') format('opentype');
+        }
+        @font-face{
+            font-family: 'NanumSquareRoundOTFL';
+            src: local('NanumSquareRoundOTFL'),
+            url('{% static 'fonts/NanumSquareRoundOTFL.otf' %}') format('opentype');
+        }
+        @font-face{
+            font-family: 'NanumSquareRoundOTFR';
+            src: local('NanumSquareRoundOTFR'),
+            url('{% static 'fonts/NanumSquareRoundOTFR.otf' %}') format('opentype');
+        }
+
+
+    </style>
+</head>

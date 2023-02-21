@@ -1,0 +1,53 @@
+<!--이름형식: 상위 장소_용도_부연 설명(어디에서 사용)-->
+<!-- 로고  -->
+<div class="Header_LogoItem_Web" >
+    {% include 'snippets/Logo_Dark.html' %}
+</div>
+
+<div class="Header_LogoItem_App" >
+    {% include 'snippets/Logo_Bright.html' %}
+</div>
+
+<!-- 스크롤 계정 메뉴 -->
+<div class="Header_AccountExpandmenuItem">
+    {% include 'expand_menu_button/expand_accountmenu_button.html' %}
+</div>
+
+<!-- 스크롤 네비게이션 메뉴 -->
+<div class="Header_NavExpandmenuItem">
+    {% include 'expand_menu_button/expand_navmenu_button.html' %}
+</div>
+
+<!-- Web 네비게이션 메뉴-->
+<div class="Header_NavmenuItem_Web NavFont">
+    {% include 'menues/logouted_nav_menues.html' %}
+</div>
+
+<!--경계선-->
+<div class="Header_HrItem">
+    <hr>
+</div>
+
+
+
+<!-- 자동 창 닫힘-->
+<script>
+const accountMenu = document.querySelector('.Header_AccountExpandmenuItem');
+const accountCheckbox = document.querySelector('#LabelLink-Account');
+const burgerMenu = document.querySelector('.Header_NavExpandmenuItem');
+const burgerCheckbox = document.querySelector('#LabelLink-Nav');
+
+document.addEventListener('click', event => {
+    if (!accountMenu.contains(event.target)) {
+        accountCheckbox.checked = false;
+    }
+
+    if (!burgerMenu.contains(event.target)) {
+        burgerCheckbox.checked = false;
+    }
+});
+</script>
+
+
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+{% include 'head.html' %}
+
+<body>
+    <header>
+        {% include 'header.html' %}
+    </header>
+
+
+    <main>
+    <div>
+        {% include 'advertisementapp/advertisementbanner.html' %}
+    </div>
+    <div  class="Contentgirdcontainer" >
+        <div class="Contentbackground">
+        </div>
+        <div class="Contentcontainer">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    </main>
+    <hr>
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+/* 로고 배치 */
+.Header_LogoItem_Web{
+    grid-column: 2/3;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Header_LogoItem_App{
+    display:none;
+}
+
+/* 계정 스크롤 메뉴 배치 */
+.Header_AccountExpandmenuItem {
+  grid-column: 3/5;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin:1rem;
+}
+
+/* 네비게이션 스크롤 메뉴 배치 */
+.Header_NavExpandmenuItem{
+    display:none;
+}
+
+/* 계정 일반 메뉴 배치 */
+/* 주의 : label을 사용할때는 grid칸이 절대 겹치면 안됨*/
+.Header_NavmenuItem_Web{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    top:0.3rem;
+}
+/* 경계선 배치 */
+.Header_HrItem{
+    grid-column: 1/5;
+    grid-row: 4/5;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+}
+
+
+/* 아이콘 관리*/
+.ExpandIconStyle{
+    color: var(--middle_text_color);
+    font-size: 2.2rem;
+    text-shadow: 0 0 2px var(--dark_shadow_color);
+}
+
+
+.ExpandedBox_Icon_Account{
+    color:var(--middle_text_color);
+    font-size: 1.2rem;
+    text-shadow: 0 0 1px var(--dark_shadow_color);
+    margin-right:0.5rem;
+}
+
+
+/* 1000px 이하 배치 */
+@media (max-width: 1000px) {
+    /* 1000px 이하 로고 배치 */
+    .Header_LogoItem_App{
+        zoom:0.9;
+        grid-column: 2/3;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: flex-start;
+        position: relative;
+        bottom:0.7rem;
+    }
+
+    .Header_LogoItem_Web{
+        display:none;
+    }
+
+    /* 1000px 이하 스크롤 계정 메뉴 배치 */
+    .Header_AccountExpandmenuItem{
+        margin:0;
+        grid-column: 3/4;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    /* 1000px 이하 스크롤 네비게이션 메뉴 배치 */
+    .Header_NavExpandmenuItem{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    /* 1000px 이하 일반 네비게이션 메뉴 배치 */
+    .Header_NavmenuItem_Web{
+        display:none;
+    }
+
+    /* 1000px 이하 경계선 배치 */
+    .Header_HrItem{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+
+    /* 아이콘 관리 */
+    .ExpandIconStyle{
+        color:var(--bright_text_color);
+        font-size: 3.2rem;
+        margin-left:1.5rem;
+        margin-right:1.5rem;
+        text-shadow: 0 0 5px var(--bright_shadow_color);
+    }
+
+
+    .ExpandedBox_Icon_Account{
+        color:var(--bright_text_color);
+        font-size: 1.8rem;
+        text-shadow: 0 0 1px var(--bright_shadow_color);
+        margin-right:0.5rem;
+    }
+}
