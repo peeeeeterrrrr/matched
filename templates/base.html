@@ -9,21 +9,13 @@
         {% include 'header.html' %}
     </header>
 
-
     <main>
-    <div>
-        {% include 'advertisementapp/advertisementbanner.html' %}
-    </div>
-    <div  class="Contentgirdcontainer" >
-        <div class="Contentbackground">
-        </div>
-        <div class="Contentcontainer">
+        <div class="Content">
             {% block content %}
             {% endblock %}
         </div>
-    </div>
     </main>
-    <hr>
+
     <footer>
         {% include 'footer.html' %}
     </footer>

@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<style>
+.ExpandedBoxItems_Alarm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--darktp_bg_color);
+    height:4.5rem;
+    width: 100%;
+    border-top: 0.5px solid gray;
+    z-index: 100;
+}
 
-</body>
-</html>
+.ExpandedBox_Alarm{
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5.7rem;
+  right:0;
+  left:0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s, visibility 0.8s;
+}
+
+.ExpandedBox_Alarm a{
+    color:var(--bright_text_color);
+}
+
+#LabelLink-Alarm:checked ~ .ExpandedBox_Alarm {
+  opacity: 1;
+  visibility: visible;
+}
+
+</style>
+
+
+<input style="display:none;" type="checkbox" id="LabelLink-Alarm">
+<label for="LabelLink-Alarm" class="HeaderIconStyle material-icons">notifications</label>
+<div class="ExpandedBox_Alarm ContentFont">
+    {% include 'menues/logined_alarm_content.html' %}
+</div>

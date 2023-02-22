@@ -46,14 +46,6 @@ a:hover {
   text-decoration: none;
 }
 
-hr {
-  height : 2px;
-  background-color : black;
-  border : 0;
-  opacity:0.4;
-  margin:0;
-  padding:0;
-}
 
 html {
   zoom: 90%;
@@ -62,102 +54,41 @@ html {
 }
 
 /* 기본 프레임 그리드 */
-.Contentgirdcontainer{
+
+body {
+  padding-top:5.7rem;
+  padding-bottom: 5.7rem;
+}
+
+
+
+main{
     display: grid;
-    grid-template-columns: auto 100px 1000px 100px auto;
-    grid-template-rows:auto 6rem;
+    grid-template-columns: 4% 92% 4% ;
+    grid-template-rows: 2rem auto 2rem;
     margin:0;
-    min-height: 65vh;
+    min-height: 100vh
     background-color: var(--middle_bg_color);
 }
 
-.Contentbackground{
-    grid-column: 2/5;
-    grid-row: 1/3;
+.Content{
+    width:92%;
+    height
+    grid-column: 2/3;
+    grid-row: 2/3;
     background-color: var(--bright_bg_color);
 }
 
-.Contentcontainer{
-    grid-column: 3/4;
-    grid-row: 1/3;
-    background-color: transparent;
-}
-/* 높이 바꿔주면 바디 패딩과 버거메뉴들 패딩 수정해주기 */
-header {
-    display: grid;
-    grid-template-columns: auto 300px 700px auto;
-    grid-template-rows: 1.8rem 2.2rem 2rem 1rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--brighttp_bg_color);
-}
 
-body {
-  padding-top:7rem;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: auto 150px 700px 150px auto;
-    grid-template-rows: 2rem 3rem auto;
-    height:100vh;
-    max-height:500px;
-    background-color: var(--dark_bg_color);
-    color: var(--bright_text_color);
-}
 
 footer a{
     color: var(--bright_text_color);
 }
 
 
+
 /* 웹 화면 관리*/
 @media (max-width: 1000px) {
-
-
-    /* 기본 프레임 그리드 변경 */
-    .Contentgirdcontainer{
-        display: grid;
-        grid-template-columns: auto 1fr 6fr 1fr auto;
-        grid-template-rows:auto 6rem;
-        margin:0;
-        min-height: 65vh
-    }
-
-    .Contentbackground{
-        grid-column: 2/5;
-        grid-row: 1/3;
-    }
-
-    .Contentcontainer{
-        grid-column: 3/4;
-        grid-row: 1/3;
-    }
-    /* 높이 바꿔주면 바디 패딩, 버거메뉴 셀높이, 버거 메뉴 떨어지는 높이 수정해주기 */
-    header {
-        display: grid;
-        grid-template-columns: 1fr 6fr 1fr;
-        grid-template-rows: 5rem 0.7rem;
-        background-color: var(--darktp_bg_color);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    body {
-      padding-top:5.7rem;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: auto 320px auto;
-        grid-template-rows: 2rem 14rem 5rem auto;
-        height:100vh;
-        max-height:400px;
-    }
 
     /* 앱화면 디폴트 세팅 */
     html {
