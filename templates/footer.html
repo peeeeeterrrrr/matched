@@ -1,3 +1,68 @@
-<a class="FooterIconStyle material-icons" href="#">home</a>
-<a class="FooterIconStyle material-icons" href="#">help</a>
-<a class="FooterIconStyle material-icons" href="#">account_circle</a>
+<style>
+footer{
+    width:100%;
+    display: flex;
+    height:5.2rem;
+    background-color: var(--darktp_bg_color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.Footer_Icon{
+    margin:0.2rem 2rem;
+    color:var(--bright_text_color);
+    font-size: 2.5rem;
+    text-shadow: 0 0 3px var(--bright_shadow_color);
+}
+
+.Footer_IconName{
+    color:var(--bright_text_color);
+    font-size: 1rem;
+}
+
+.Footer_IconItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+
+<div class="Footer_IconItem FooterNavFont">
+    <a class="Footer_Icon material-icons" href="#">
+    <span>home</span>
+    </a>
+    <span class="Footer_IconName">홈</span>
+</div>
+
+<div class="Footer_IconItem FooterNavFont">
+    <a class="Footer_Icon material-icons" href="#">
+        <span>edit</span>
+    </a>
+    <span class="Footer_IconName">수업관리</span>
+</div>
+
+<div class="Footer_IconItem FooterNavFont">
+    <a class="Footer_Icon material-icons" href="#">
+        <span>group_add</span>
+    </a>
+    <span class="Footer_IconName">과외매칭</span>
+</div>
+
+
+<div class="Footer_IconItem FooterNavFont" >
+    <a class="Footer_Icon material-icons" href="#">
+        <span>account_circle</span>
+    </a>
+    {% if not user.is_authenticated %}
+    <span class="Footer_IconName">로그인/가입</span>
+    {% else %}
+    <span class="Footer_IconName">내정보</span>
+    {% endif %}
+</div>

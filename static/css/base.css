@@ -22,11 +22,6 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-/* 다크모드 관리 */
-
-
-
-
 
 /* 기본 테그들 관리 */
 
@@ -56,28 +51,16 @@ html {
 /* 기본 프레임 그리드 */
 
 body {
-  padding-top:5.7rem;
-  padding-bottom: 5.7rem;
+  padding-top:5rem;
+  padding-bottom: 5.2rem;
 }
-
-
 
 main{
-    display: grid;
-    grid-template-columns: 4% 92% 4% ;
-    grid-template-rows: 2rem auto 2rem;
     margin:0;
-    min-height: 100vh
-    background-color: var(--middle_bg_color);
-}
-
-.Content{
-    width:92%;
-    height
-    grid-column: 2/3;
-    grid-row: 2/3;
+    min-height: 100vh;
     background-color: var(--bright_bg_color);
 }
+
 
 
 

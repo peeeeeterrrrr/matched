@@ -42,5 +42,9 @@
 <input style="display:none;" type="checkbox" id="LabelLink-Account">
 <label for="LabelLink-Account" class="HeaderIconStyle material-icons">edit_square</label>
 <div class="ExpandedBox_Account ContentFont">
-    {% include 'menues/logined_account_menues.html' %}
+    {% if not user.is_authenticated %}
+    {% include 'exapnd_menubutton/logined_account_menues.html' %}
+    {% else %}
+    {% include 'exapnd_menubutton/logined_account_menues.html' %}
+    {% endif %}
 </div>

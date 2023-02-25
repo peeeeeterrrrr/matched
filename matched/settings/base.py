@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'accountapp',
     'advertisementapp',
+    'homescreenapp',
+    'announcementapp',
 
 ]
 

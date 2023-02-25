@@ -2,6 +2,7 @@
   --dark_bg_color: 	#282828;
   --bright_bg_color: white;
   --middle_bg_color: #F0F0F0;
+  --menu_bg_color: 	#DCDCDC;
 
   --dark_text_color: black;
   --bright_text_color: white;
@@ -13,5 +14,5 @@
   --bright_shadow_color: white;
 
   --brighttp_bg_color:rgba(255,255,255,0.95);
-  --darktp_bg_color: rgba(16,16,16,0.9);
+  --darktp_bg_color: rgba(20,20,20,0.9);
 }

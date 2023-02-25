@@ -4,5 +4,5 @@ from advertisementapp.views import AdvertisementListView
 app_name = 'advertisementapp'
 
 urlpatterns = [
-    path('advertisementbanner/', AdvertisementListView.as_view(), name='advertisementbanner'),
+    path('advertisement_banner/', AdvertisementListView.as_view(), name='advertisement_banner'),
 ]

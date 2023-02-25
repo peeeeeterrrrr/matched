@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 5.7rem;
+  top: 5rem;
   right:0;
   left:0;
   width: 100%;
@@ -38,9 +38,12 @@
 
 </style>
 
-
 <input style="display:none;" type="checkbox" id="LabelLink-Alarm">
-<label for="LabelLink-Alarm" class="HeaderIconStyle material-icons">notifications</label>
+<label for="LabelLink-Alarm" class="HeaderIcon material-icons">notifications</label>
 <div class="ExpandedBox_Alarm ContentFont">
-    {% include 'menues/logined_alarm_content.html' %}
+    {% if not user.is_authenticated %}
+    {% include 'expand_menubutton/logouted_alarm_content.html' %}
+    {% else %}
+    {% include 'expand_menubutton/logined_alarm_content.html' %}
+    {% endif %}
 </div>

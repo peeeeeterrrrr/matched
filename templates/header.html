@@ -1,26 +1,72 @@
+<style>
+header {
+    display: grid;
+    grid-template-columns: auto 12rem;
+    grid-template-rows: 5rem;
+    background-color: var(--darktp_bg_color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* 로고 배치 */
+
+.Header_LogoItem{
+    zoom:0.84;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-start;
+    position: relative;
+    bottom:1rem;
+    margin-left:1.7rem;
+}
+
+
+.Header_IconItem{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* 아이콘 관리 */
+.HeaderIcon{
+    color:var(--bright_text_color);
+    font-size: 2.5rem;
+    margin-right:1.3rem;
+    text-shadow: 0 0 3px var(--bright_shadow_color);
+}
+
+
+</style>
+
+
 <div class="Header_LogoItem" >
     {% include 'snippets/Logo_Bright.html' %}
 </div>
 
 <!-- 스크롤 네비게이션 메뉴 -->
-<div class="Expand_IconItem">
-    <div class="Alarm_button">{% include 'expand_menu_button/expand_alarm_button.html' %}</div>
-    <div class="Account_button">{% include 'expand_menu_button/expand_accountmenu_button.html' %}</div>
+<div class="Header_IconItem">
+    <div class="Alarm_button">{% include 'expand_menubutton/expand_alarm_button.html' %}</div>
+    <a><span class="HeaderIcon material-icons">share</span></a>
 </div>
 
 <!-- 자동 창 닫힘-->
 <script>
 
-const accountMenu = document.querySelector('.Account_button');
-const accountCheckbox = document.querySelector('#LabelLink-Account');
+
 const alarmMenu = document.querySelector('.Alarm_button');
 const alarmCheckbox = document.querySelector('#LabelLink-Alarm');
 
 document.addEventListener('click', event => {
 
-    if (!accountMenu.contains(event.target)) {
-        accountCheckbox.checked = false;
-    }
     if (!alarmMenu.contains(event.target)) {
         alarmCheckbox.checked = false;
     }
