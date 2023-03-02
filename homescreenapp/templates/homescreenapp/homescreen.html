@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-    <div>
+<header>
+    {% include 'header.html' %}
+</header>
+<main>
+    <div></div>
     {% include 'advertisementapp/advertisement_banner.html' %}
     {% include 'announcementapp/announcement_banner.html' %}
     {% include 'homescreen_snippets/card_menu.html' %}
+</main>
+
 {% endblock %}

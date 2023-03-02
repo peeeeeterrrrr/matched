@@ -5,15 +5,8 @@
 {% include 'head.html' %}
 
 <body>
-    <header>
-        {% include 'header.html' %}
-    </header>
-
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
-
+    {% block content %}
+    {% endblock %}
     <footer>
         {% include 'footer.html' %}
     </footer>

@@ -1,24 +1,16 @@
-/* font */
-.LogoFont{
-    font-family: 'Righteous', cursive;
-}
-
-.NavFont{
+.IndexFont{
     font-family: 'NanumSquareRoundOTFB';
 }
-
 .ContentFont{
     font-family: 'NanumSquareRoundOTFR';
 }
-
-.NavFont_Bold{
+.TitleFont{
     font-family: 'NanumSquareRoundOTFEB';
 }
-
-.FooterNavFont{
+.FooterIconFont{
     font-family: 'NanumSquareRoundOTFL';
 }
-.FooterThinFont{
+.FooterDetailFont{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -36,6 +28,16 @@ a {
   color: var(--dark_text_color);
 }
 
+button{
+    background: inherit ;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer
+    }
+
 a:hover {
   color: var(--hover_text_color);
   text-decoration: none;
@@ -51,8 +53,8 @@ html {
 /* 기본 프레임 그리드 */
 
 body {
-  padding-top:5rem;
-  padding-bottom: 5.2rem;
+  padding-top:6rem;
+  padding-bottom: 5.5rem;
 }
 
 main{
@@ -60,8 +62,6 @@ main{
     min-height: 100vh;
     background-color: var(--bright_bg_color);
 }
-
-
 
 
 footer a{

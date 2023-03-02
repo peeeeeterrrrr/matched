@@ -1,17 +1,15 @@
 :root {
-  --dark_bg_color: 	#282828;
+  --dark_bg_color: 	#484848;
   --bright_bg_color: white;
-  --middle_bg_color: #F0F0F0;
-  --menu_bg_color: 	#DCDCDC;
+  --middle_bg_color: #BEBEBE;
+  --menu_bg_color: #F8F8FF;
 
-  --dark_text_color: black;
-  --bright_text_color: white;
-  --middle_text_color: #404040;
-
+  --dark_text_color: #181818;
+  --bright_text_color: #F8F8FF;
+  --darkgray_text_color: #484848;
+  --brightgray_text_color:#D3D3D3;
   --hover_text_color: #FFC0CB;
 
-  --dark_shadow_color: black;
-  --bright_shadow_color: white;
 
   --brighttp_bg_color:rgba(255,255,255,0.95);
   --darktp_bg_color: rgba(20,20,20,0.9);

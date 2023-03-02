@@ -1,0 +1,39 @@
+.MainFrame{
+    margin:3rem 6% auto 6%;
+}
+
+.InputfieldBox{
+    margin-bottom: 1.8rem;
+    font-size:1.4rem;
+    background-color: var(--menu_bg_color);
+    height:4rem;
+}
+
+.InputfieldBox::placeholder {
+    color: var(--brightgray_text_color);
+    font-size: 1.3rem;
+}
+
+.form-group label, .form-control {
+    color: var(--dark_text_color);
+}
+
+.FormContent_Item{
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+.SubmitButton{
+    background-color:var(--middle_bg_color);
+    color:var(--bright_text_color);
+    width:80%;
+    height: 4rem;
+    font-size:1.4rem;
+}
+
+.SubmitButton_Item{
+    margin-top:5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}

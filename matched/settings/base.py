@@ -118,8 +118,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-LOGIN_REDIRECT_URL = reverse_lazy('home') # 로그인 로그아웃시  redirect next없을때 초기화 주소
+LOGIN_REDIRECT_URL = reverse_lazy('homescreenapp:homescreen') # 로그인 로그아웃시  redirect next없을때 초기화 주소
 LOGOUT_REDIRECT_URL = reverse_lazy('accountapp:login')
 
 MEDIA_URL = '/media/' # 이 경로 이하로 접근해야 실제 미디어 접근 가능
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #미디어 루트는 미디어 파일을 올렸을때 어떤 서버에 저장할지
+AUTH_USER_MODEL = 'accountapp.CustomUser'
