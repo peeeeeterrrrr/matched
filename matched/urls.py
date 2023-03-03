@@ -24,4 +24,8 @@ urlpatterns = [
     path('advertisements/', include('advertisementapp.urls')),
     path('homescreens/', include('homescreenapp.urls')),
     path('announcements/', include('announcementapp.urls')),
+    path('careers/', include('careerapp.urls')),
+    path('scholarships/', include('scholarshipapp.urls')),
+    path('baseinformations/', include('baseinformationapp.urls')),
+    path('teacherprofiles/', include('teacherprofileapp.urls')),
 ] +static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

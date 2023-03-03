@@ -8,18 +8,18 @@ from accountapp.models import CustomUser
 
 class AccountLoginForm(AuthenticationForm):
     username = UsernameField(
-        label=("아이디"),
+        label=(""),
         widget=forms.TextInput(attrs={
-            'placeholder': '사용자 아이디',
+            'placeholder': '아이디',
             'class': 'InputfieldBox',
             'autofocus': True
         })
     )
     password = forms.CharField(
-        label=("비밀번호"),
+        label=(""),
         strip=False,
         widget=forms.PasswordInput(attrs={
-            'placeholder': '사용자 아이디',
+            'placeholder': '비밀번호',
             'class': 'InputfieldBox',
             'autocomplete': 'current-password'
         })
@@ -54,14 +54,14 @@ class AccountCreateForm(UserCreationForm):
             'username': '아이디',
             'userrealname': '이름',
             'email': '이메일',
-            'phone_number': '전화 번호',
+            'phone_number': '전화번호',
         }
 
         widgets = {
             'username': forms.TextInput(attrs={'placeholder': '10자 이하 사용자 아이디', 'class': 'InputfieldBox',}),
             'userrealname': forms.TextInput(attrs={'placeholder': '사용자 실명', 'class': 'InputfieldBox',}),
             'email': forms.EmailInput(attrs={'placeholder': '비밀번호 찾기를 위해 정확한 주소를 입력해 주세요', 'class': 'InputfieldBox',}),
-            'phone_number': forms.TextInput(attrs={'placeholder': '알림 수신을 위해 정확한 전화 번호를 입력해 주세요','class': 'InputfieldBox',}),
+            'phone_number': forms.TextInput(attrs={'placeholder': '알림 수신을 위해 정확한 전화번호를 입력해 주세요','class': 'InputfieldBox',}),
         }
 
 

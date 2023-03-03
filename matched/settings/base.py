@@ -31,6 +31,10 @@ INSTALLED_APPS = [
     'advertisementapp',
     'homescreenapp',
     'announcementapp',
+    'scholarshipapp',
+    'careerapp',
+    'teacherprofileapp',
+    'baseinformationapp',
 
 ]
 

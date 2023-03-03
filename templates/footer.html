@@ -2,7 +2,7 @@
 footer{
     width:100%;
     display: flex;
-    height:5.5rem;
+    height:6rem;
     background-color: var(--darktp_bg_color);
     position: fixed;
     bottom: 0;
@@ -57,7 +57,7 @@ footer{
 
 <div class="Footer_IconItem FooterIconFont" >
     {% if not user.is_authenticated %}
-    <a class="Footer_Icon material-icons" href="{% url 'accountapp:create' %}">
+    <a class="Footer_Icon material-icons" href="{% url 'accountapp:login' %}">
         <span>account_circle</span>
     </a>
     <span class="Footer_IconName">로그인/가입</span>

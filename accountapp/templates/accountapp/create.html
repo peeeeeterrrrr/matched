@@ -12,7 +12,7 @@
   <div class="MainFrame">
       <form action="{% url 'accountapp:create' %}" method="post" >
         <div class="FormContent_Item IndexFont">{% csrf_token %}{% bootstrap_form form %}</div>
-        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont"></div>
+        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont" value="회원가입"></div>
       </form>
   </div>
 </main>

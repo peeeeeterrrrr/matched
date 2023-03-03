@@ -2,22 +2,59 @@
 {% load bootstrap4 %}
 {% block content %}
 <style>
-    .MainFrame{
-        margin-top:15rem;
-    }
+.MainFrame{
+    margin-top:12rem;
+}
+
+.Header_Hr_Div{
+    display:none;
+ }
+
+.Login_Logo{
+    zoom: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-bottom:1.5rem;
+}
+
+
+.SubmitButton_Item{
+    margin-top:20rem;
+}
+
+.Login_Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top:2rem;
+    color: var(--darkgray_text_color);
+    font-size:1.4rem;
+}
+
+
 </style>
 <header>
       {% include 'header.html' %}
-      <div class="Header_Title_Item TitleFont" >
-        로그인
-      </div>
 </header>
 <main>
   <div class="MainFrame">
+      <div class="Login_Logo" >
+        {% include 'snippets/Logo_Dark.html' %}
+      </div>
       <form action="{% url 'accountapp:login' %}" method="post" >
         <div class="FormContent_Item IndexFont">{% csrf_token %}{% bootstrap_form form %}</div>
-        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont"></div>
+            <div class="Login_Footer IndexFont">
+                <span>비밀번호를 잊어버리셨나요? <a href="{% url 'accountapp:password_search' %}">비밀번호 찾기</a> </span>
+                <span>아직 계정이 없으신가요?<a href="{% url 'accountapp:create' %}" >회원가입</a></span>
+            </div>
+        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont" value="로그인"></div>
+
       </form>
+
+
   </div>
 </main>
 {% endblock %}
