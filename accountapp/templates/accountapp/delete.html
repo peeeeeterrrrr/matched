@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+<style>
+.MainFrame{
+    margin-top:12rem;
+}
 
-</body>
-</html>
+.Header_Hr_Div{
+    display:none;
+ }
+
+.Login_Logo{
+    zoom: 1.6;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    margin-bottom:1.5rem;
+}
+
+
+
+
+
+</style>
+<header>
+      {% include 'header.html' %}
+</header>
+<main>
+  <div class="MainFrame">
+      <div class="Login_Logo" >
+        {% include 'snippets/Logo_Dark.html' %}
+      </div>
+      <form action="{% url 'accountapp:login' %}" method="post" >
+        <div class="FormContent_Item IndexFont">{% csrf_token %}{% bootstrap_form form %}</div>
+
+        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont" value="로그인"></div>
+
+      </form>
+
+
+  </div>
+</main>
+{% endblock %}
+    <form action="{% url 'accountapp:delete' pk=target_user.pk %}" method="post">
+      {% csrf_token %}
+      <input type="submit" class ='btn rounded-pill col-6 mt-3 Korean_font2' style="background-color: #f88;">
+    </form>

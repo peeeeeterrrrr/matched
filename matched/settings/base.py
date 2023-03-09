@@ -33,9 +33,10 @@ INSTALLED_APPS = [
     'announcementapp',
     'scholarshipapp',
     'careerapp',
-    'teacherprofileapp',
     'baseinformationapp',
-
+    'profileapp',
+    'studymanageapp',
+    'classmatchapp',
 ]
 
 MIDDLEWARE = [

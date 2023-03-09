@@ -27,5 +27,7 @@ urlpatterns = [
     path('careers/', include('careerapp.urls')),
     path('scholarships/', include('scholarshipapp.urls')),
     path('baseinformations/', include('baseinformationapp.urls')),
-    path('teacherprofiles/', include('teacherprofileapp.urls')),
+    path('profiles/', include('profileapp.urls')),
+    path('classmatchs/', include('classmatchapp.urls')),
+    path('studymanages/', include('studymanageapp.urls')),
 ] +static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

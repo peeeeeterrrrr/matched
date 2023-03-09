@@ -1,4 +1,4 @@
-from django.contrib.auth import password_validation
+
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm, UsernameField
 from django import forms
 
@@ -10,7 +10,7 @@ class AccountLoginForm(AuthenticationForm):
     username = UsernameField(
         label=(""),
         widget=forms.TextInput(attrs={
-            'placeholder': '아이디',
+            'placeholder': '전화번호',
             'class': 'InputfieldBox',
             'autofocus': True
         })
@@ -49,25 +49,30 @@ class AccountCreateForm(UserCreationForm):
 
     class Meta:
         model = CustomUser
-        fields = ('username', 'userrealname', 'email', 'phone_number', 'password1', 'password2')
+        fields = ('username', 'userrealname', 'email', 'password1', 'password2')
         labels = {
-            'username': '아이디',
+            'username': '전화번호',
             'userrealname': '이름',
             'email': '이메일',
-            'phone_number': '전화번호',
         }
 
         widgets = {
-            'username': forms.TextInput(attrs={'placeholder': '10자 이하 사용자 아이디', 'class': 'InputfieldBox',}),
+            'username': forms.NumberInput(attrs={'placeholder': '- 제외 전화번호 11자','class': 'InputfieldBox',}),
             'userrealname': forms.TextInput(attrs={'placeholder': '사용자 실명', 'class': 'InputfieldBox',}),
             'email': forms.EmailInput(attrs={'placeholder': '비밀번호 찾기를 위해 정확한 주소를 입력해 주세요', 'class': 'InputfieldBox',}),
-            'phone_number': forms.TextInput(attrs={'placeholder': '알림 수신을 위해 정확한 전화번호를 입력해 주세요','class': 'InputfieldBox',}),
         }
 
 
 
 
 class AccountUpdateForm(UserCreationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields['username'].disabled = True
+        self.fields['userrealname'].disabled = True
+        self.fields['email'].disabled = True
+        self.fields['phone_number'].disabled = True
     password1 = forms.CharField(
         label=("비밀번호"),
         strip=False,
@@ -87,27 +92,19 @@ class AccountUpdateForm(UserCreationForm):
             'autocomplete': 'new-password'
         }),
     )
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
 
-        self.fields['username'].disabled = True
-        self.fields['userrealname'].disabled = True
-        self.fields['email'].disabled = True
-        self.fields['phone_number'].disabled = True
 
     class Meta:
         model = CustomUser
-        fields = ('username', 'userrealname', 'email', 'phone_number', 'password1', 'password2')
+        fields = ('username', 'userrealname', 'email', 'password1', 'password2')
         labels = {
-            'username': '아이디',
+            'username': '전화번호',
             'userrealname': '이름',
             'email': '이메일',
-            'phone_number': '전화 번호',
         }
 
         widgets = {
-            'username': forms.TextInput(attrs={'placeholder': '10자 이하 사용자 아이디', 'class': 'InputfieldBox',}),
+            'username': forms.NumberInput(attrs={'placeholder': '- 제외 전화번호 11자','class': 'InputfieldBox',}),
             'userrealname': forms.TextInput(attrs={'placeholder': '사용자 실명', 'class': 'InputfieldBox',}),
             'email': forms.EmailInput(attrs={'placeholder': '비밀번호 찾기를 위해 정확한 주소를 입력해 주세요', 'class': 'InputfieldBox',}),
-            'phone_number': forms.TextInput(attrs={'placeholder': '-를 제외한 정확한 전화 번호를 입력해 주세요','class': 'InputfieldBox',}),
         }

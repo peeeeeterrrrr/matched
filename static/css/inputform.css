@@ -1,19 +1,50 @@
 .MainFrame{
     height:100%;
-    margin:3rem 6% auto 6%;
+    margin:2rem 6% auto 6%;
 }
 
 .InputfieldBox{
     border:none;
-    margin-bottom: 1.8rem;
-    font-size:1.4rem;
+    margin-bottom: 1.5rem;
+    font-size:1.3rem;
     background-color: var(--menu_bg_color);
     height:4rem;
 }
 
+.InputfieldBox_textarea{
+    border:none;
+    margin-bottom: 1.5rem;
+    font-size:1.3rem;
+    background-color: var(--menu_bg_color);
+    height:10rem;
+}
+
+.InputfieldBox_date{
+    width:40%;
+    border:none;
+    margin-bottom: 1.5rem;
+    font-size:1.3rem;
+    background-color: var(--menu_bg_color);
+    height:4rem;
+}
+
+.InputfieldBox_Image{
+    margin-bottom: 1.5rem;
+    font-size:1.3rem;
+    background-color: var(--menu_bg_color);
+
+}
 .InputfieldBox::placeholder {
     color: var(--brightgray_text_color);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+    select.InputfieldBox option {
+        background-color:yellow; /* Change the background color of each option */
+        color: #333; /* Change the font color of each option */
+        padding: 5px; /* Add some padding to each option */
+    }
 }
 
 .form-group label, .form-control {
@@ -29,8 +60,8 @@
     background-color:var(--middle_bg_color);
     color:var(--bright_text_color);
     width:100%;
-    height: 4.5rem;
-    font-size:1.5rem;
+    height: 4.3rem;
+    font-size:1.4rem;
 }
 
 .SubmitButton_Item{

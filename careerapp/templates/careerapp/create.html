@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
+<header>
+      {% include 'header.html' %}
+      <div class="Header_Title_Item TitleFont" >
+        학원 및 개인 교습 경력
+      </div>
+</header>
+<main>
+  <div class="MainFrame">
+      <form action="{% url 'careerapp:create' %}" method="post" >
+        <div class="FormContent_Item IndexFont">{% csrf_token %}{% bootstrap_form form %}</div>
+        <div class="SubmitButton_Item"> <input type="submit" class="btn SubmitButton IndexFont" value="경력 작성"></div>
+      </form>
+  </div>
+</main>
+{% endblock %}

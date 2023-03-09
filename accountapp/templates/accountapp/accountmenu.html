@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
+<style>
+.MainFrame{
+    height:100%;
+    margin:0 2% auto 2%;
+}
+
+.Header_Hr_Div{
+    display:none;
+ }
+
+.AccountProfileBox{
+    border: 0.3px solid var(--brightgray_text_color);
+    border-radius:1rem;
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    padding-left:1rem;
+    padding-right:1rem;
+    width:100%;
+    height:7rem;
+    margin-bottom:1rem;
+}
+
+.AccountMenuBox{
+    border: 0.3px solid var(--brightgray_text_color);
+    border-radius:1rem;
+    width:100%;
+    margin-bottom:1rem;
+}
+
+.profilebutton {
+    border-radius:1rem;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    font-size:1.3rem;
+    margin-left:auto;
+    width:30%;
+    height:40%;
+    background-color:var(--menu_bg_color);
+}
+
+.AccountProfileItemBox_Content{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    font-size:1.3rem;
+    padding-left:1rem;
+    color:var(--dark_text_color);
+}
+
+.AccountProfileItemBox_Content_phonenumber{
+    margin-top:0.3rem;
+    font-size:1.2rem;
+    color:var(--darkgray_text_color);
+}
+
+
+.AccountMenuItemBox_Title{
+    border-radius:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding-left:1.5rem;
+    height:4.5rem;
+    font-size:1.4rem;
+    color:var(--dark_text_color);
+}
+.AccountMenuItemBox_Content{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;;
+    align-items: center;
+    padding-left:1.5rem;
+    height:4.5rem;
+    font-size:1.3rem;
+    color:var(--darkgray_text_color);
+}
+
+</style>
+
+<header>
+      {% include 'header.html' %}
+      <div class="Header_Title_Item TitleFont" >
+        내 정보
+      </div>
+</header>
+<main>
+  <div class="MainFrame">
+
+    <div class="AccountProfileBox">
+        <img style="height:5rem; width:5rem;" src='/media/icons/profile.png'>
+        <div class="AccountProfileItemBox_Content">
+            <span class="TitleFont">{{target_user.userrealname}}</span>
+            <span class="AccountProfileItemBox_Content_phonenumber IndexFont">{{target_user.username}}</span>
+        </div>
+        <div class="profilebutton IndexFont">프로필 보기</div>
+    </div>
+    <div class="AccountMenuBox IndexFont">
+        <div class="AccountMenuItemBox_Title TitleFont">계정</div>
+        <a>
+            <div class="AccountMenuItemBox_Content">비밀번호변경</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">회원탈퇴</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">로그아웃</div>
+        </a>
+    </div>
+    <div class="AccountMenuBox IndexFont">
+        <div class="AccountMenuItemBox_Title TitleFont">이용안내</div>
+        <a href="{% url 'homescreenapp:userguide'%}">
+            <div class="AccountMenuItemBox_Content">사용 가이드</div>
+        </a>
+        <a href="{% url 'homescreenapp:aboutus'%}">
+            <div class="AccountMenuItemBox_Content">About us</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">공지사항</div>
+        </a>
+        <a href="{% url 'homescreenapp:contact'%}">
+            <div class="AccountMenuItemBox_Content">문의하기</div>
+        </a>
+
+    </div>
+    <div class="AccountMenuBox IndexFont">
+        <div class="AccountMenuItemBox_Title TitleFont">선생님 관련</div>
+        <a href="{% url 'homescreenapp:teacheremployee'%}">
+            <div class="AccountMenuItemBox_Content">선생님 채용</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">선생님 계정 신청</div>
+        </a>
+    </div>
+    <div class="AccountMenuBox IndexFont">
+        <div class="AccountMenuItemBox_Title TitleFont">기타</div>
+        <a>
+            <div class="AccountMenuItemBox_Content">알림설정</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">서비스 이용약관</div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content"><span>개인정보 처리</span><span style="margin-right:2rem;">d</span></div>
+        </a>
+        <a>
+            <div class="AccountMenuItemBox_Content">Copyright</div>
+        </a>
+    </div>
+
+
+  </div>
+</main>
+{% endblock %}

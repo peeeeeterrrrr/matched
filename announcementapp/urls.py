@@ -6,4 +6,5 @@ app_name = 'announcementapp'
 
 urlpatterns = [
     path('announcement_banner/', AnnouncementListView.as_view(), name='announcement_banner'),
+    path('announcement_banner/', AnnouncementListView.as_view(), name='announcement_banner')
 ]

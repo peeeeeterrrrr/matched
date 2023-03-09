@@ -48,46 +48,58 @@
 </style>
 
 <div class="Menu_Line1 IndexFont">
+    <a>
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/010-people.png'>
-        </div>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/010-people.png'></div>
         <span class="Cardmenu_Name">과외 매칭</span>
     </div>
+    </a>
+    <a>
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/resume.png'>
-        </div>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/resume.png'></div>
         <span class="Cardmenu_Name">수업 관리</span>
     </div>
+    </a>
+    <a>
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/011-candidate.png'>
-        </div>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/011-candidate.png'></div>
         <span class="Cardmenu_Name">선생님 검색</span>
     </div>
+    </a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'profileapp:profile' pk=user.pk %}">
+    {% else %}
+    <a href="{% url 'accountapp:login'%}">
+    {% endif %}
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/009-id-card.png'>
-        </div>
-        <span class="Cardmenu_Name">내 과외 정보</span>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/009-id-card.png'></div>
+        <span class="Cardmenu_Name">수업 프로필</span>
     </div>
+    </a>
 </div>
 <div class="Menu_Line2 IndexFont">
+    <a href="{% url 'homescreenapp:userguide'%}">
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/015-information.png'>
-        </div>
-        <span class="Cardmenu_Name">이용 안내</span>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/015-information.png'></div>
+        <span class="Cardmenu_Name">사용 가이드</span>
     </div>
+    </a>
+    <a href="{% url 'homescreenapp:aboutus'%}">
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/014-idea.png'>
-        </div>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/014-idea.png'></div>
         <span class="Cardmenu_Name">About Us</span>
     </div>
+    </a>
+    <a href="{% url 'homescreenapp:contact'%}">
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/013-question.png'>
-        </div>
-        <span class="Cardmenu_Name">contact</span>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/013-question.png'></div>
+        <span class="Cardmenu_Name">문의하기</span>
     </div>
+    </a>
+    <a href="{% url 'homescreenapp:teacheremployee'%}">
     <div class="Cardmenu_Item">
-        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/008-insurance.png'>
-        </div>
+        <div class="Cardmenu_Box"><img class="Cardmenu_Img" src='/media/icons/008-insurance.png'></div>
         <span class="Cardmenu_Name">선생님 채용</span>
     </div>
+    </a>
 </div>
